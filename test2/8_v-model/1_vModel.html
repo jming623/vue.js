@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+</head>
+<body>
+    <div id = "selectBox">
+        <h2>v-model을 이용하여 체크된 값 받아 입력1</h2>
+        <div>좋아하는 언어를 선택해보자1</div>
+        <input type="checkbox" value="java" v-model="lang">java
+        <input type="checkbox" value="python" v-model="lang">python
+        <input type="checkbox" value="vue.js" v-model="lang">vue.js
+    </div>
+
+    <div id = "selectedLang">
+        선택한 언어 ::
+        <!-- <span v-html="lang"></lang> -->
+        <!-- <span v-text="lang"></lang> -->
+        <span>{{lang}}</span>
+    </div>
+
+    <script>
+       var model = {
+           lang : []
+       }
+
+       new Vue({
+           el : "#selectBox",
+           data : model
+       })
+
+       new Vue({
+           el : "#selectedLang",
+           data : model
+       })
+    </script>
+</body>
+</html>

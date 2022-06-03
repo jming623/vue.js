@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+</head>
+<body>
+    <H2>v-model을 사용하여 radio값 받아주기</H2>
+    <div id="app">
+        <label><input type="radio" name="food" value="피자" v-model="picked">피자</label>
+        <label><input type="radio" name="food" value="치킨" v-model="picked">치킨</label>
+        <label><input type="radio" name="food" value="햄버거" v-model="picked">햄버거</label>
+        <br/><span>선택한 음식 :{{picked}}</span>        
+    </div>
+
+    <script>
+        new Vue({
+            el : "#app",
+            data : {
+                picked : ""
+            }
+        })
+        
+    </script>
+</body>
+</html>

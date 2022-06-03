@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>computed속성을 사용하면 한번계산된 함수의 결과는 읽기전용으로 수정할 수 없게되고,<br>
+        이후에 참조할 때는 다시 계산하지 않고 첫번째 계산된 결과값을 반환한다.</h2>
+    <div id="app">
+        <h1>{{ computedProperty }}</h1>
+        <h1>{{ computedProperty }}</h1>
+        <h1>{{ computedProperty }}</h1>
+        <h1>{{ computedProperty }}</h1>
+        <h1>{{ computedProperty }}</h1>
+        <button onclick="changeData();">시간변경</button>
+    </div>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+        computed: {
+            computedProperty(){
+                console.log("recompute?!");
+                return new Date();
+            }
+        }
+        });
+        function changeData(){
+            app.computedProperty = new Date();
+        };
+    </script>      
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="EUC-KR">
+    <title>document</title>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+</head>
+<body>
+    <h2>Hello Word출력예제1</h2>
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                message : 'Hello World'
+            }
+        })
+    </script>
+</body>
+</html>

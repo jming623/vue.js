@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ value }}</h1>
+        <input id="INPUT" type="text" @keyup='setValue() '>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script>
+      const app = new Vue({
+        el: "#app",
+        data: { value: "입력폼에 텍스트를 입력해보세요" },
+        methods: {
+          setValue: function(){
+            this.value = document.getElementById("INPUT").value;
+          }
+        }
+      });
+      </script>
+</body>
+</html>

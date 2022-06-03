@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-for="(item,index) in arr"> {{index}} ==> {{item}}</p>
+        <br>
+        <p v-for="(item,key) in obj"> {{key}} ==> {{item}} </p>
+        <br>
+        <p v-for="(item,key,index) in obj"> {{index}}번째 {{key}} ==> {{item}} </p>
+    </div>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+    <script>
+         new Vue({
+             el : "#app",
+             data : {
+                 arr : ["A","B","C","D","E","F"],
+                 obj : {
+                     "name" : "이름",
+                     "age" : "나이",
+                     "gender" : "성별"
+                 }
+             }
+         })
+    </script>
+</body>
+</html>

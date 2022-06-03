@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{message}}</p>
+        <button v-on:click="setValue('왼쪽')">left</button>
+        <button @click="setValue('오른쪽')">right</button>
+    </div>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+    <script>
+        new Vue({
+            el : "#app",
+            data : {
+                message : "클릭해주세여"
+            },
+            methods :{
+                setValue(str){
+                this.message = str;
+            }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>document</title>
+<script src="https://unpkg.com/vue@2.3.3"></script>
+</head>
+<body>
+	<h2>Hello Word출력예제2</h2>
+	<div id="app">
+		<!-- <h2>{{message}}</h2> -->
+        <h2 v-text="message"></h2>
+        <!-- <input type="text" v-bind:value="message"/> -->
+	</div> 
+	  
+	<script>
+	 var model = {
+	 message : "Hello World"
+	 }
+	 
+	 var _app = new Vue({
+	 el : "#app",
+	 data : model
+	 })
+	</script>
+</body>
+</html>

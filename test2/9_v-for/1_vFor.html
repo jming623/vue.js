@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>구구단 2단 출력</h3>
+    <div id="app">
+        <li v-for="i in 9">
+            2 * {{i}} = {{2 * i}}
+        </li>
+    </div>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+    <script>
+        new Vue({
+            el : "#app"
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-bind:style = "red">Hello World!</p>
+        <p :style = "blue">Hello World!</p>
+    </div>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+    <script>
+        new Vue({
+            el : "#app",
+            data : {
+                red : "color : red;",
+                blue : "color : blue;"
+            }            
+        })
+
+    </script>
+</body>
+</html>

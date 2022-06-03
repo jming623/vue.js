@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+</head>
+<body>
+    <h2>v-model을 이용하여 입력값 받아주기</h2>
+    <H2>example-1</H2>
+    <div id="example-1">
+        <input type="text" placeholder="입력" v-model="message">
+    </div>
+    <div id="result1">
+        <span>메세지: {{message}}</span>
+    </div>
+    
+    <H2>example-2</H2>
+    <div id="example-2">
+        <input type="text" placeholder="입력" v-model="message"><br/>
+        <span>메세지: {{message}}</span>
+    </div>
+
+
+    <script>
+        // example-1
+        var model = {
+            message : ''
+        }
+
+        new Vue({
+            el : "#example-1",
+            data : model
+        })
+
+        new Vue({
+            el : "#result1",
+            data : model
+        })
+        //end example-1
+
+
+        // example-2
+        new Vue({
+            el : "#example-2",
+            data : {
+                message : ""
+            }
+        })
+
+    </script>
+</body>
+</html>

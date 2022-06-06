@@ -2,7 +2,8 @@
   <div id="app">
     <Header />
 
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+      <router-view></router-view>	
 
     <Footer />
   </div>

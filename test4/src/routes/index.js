@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import HelloWorld from '@/components/HelloWorld';
 import List from '@/components/board/List';
 import Write from '@/components/board/Write';
+import View from '@/components/board/View'
 
 Vue.use(Router);
 
